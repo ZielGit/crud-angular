@@ -3,17 +3,17 @@
         Add Employee
     </div>
     <div class="card-body">
-        <form action="">
+        <form [formGroup]="formEmployee" (ngSubmit)="enviarDatos()">
             <div class="mb-3">
               <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" name="" id="name" placeholder="Enter your name">
+              <input type="text" class="form-control" name="" id="name" formControlName="name" placeholder="Enter your name">
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="text" class="form-control" name="" id="email" placeholder="Enter your email">
+              <input type="text" class="form-control" name="" id="email" formControlName="email" placeholder="Enter your email">
             </div>
             <div class="btn-group" role="group">
-                <button type="button" class="btn btn-success">Add</button>
+                <button type="submit" class="btn btn-success">Add</button>
                 <button type="button" class="btn btn-primary">Cancel</button>
             </div>
         </form>
