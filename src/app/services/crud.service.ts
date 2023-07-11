@@ -16,4 +16,8 @@ export class CrudService {
   AddEmployee(dataEmployee:Employee):Observable<any>{
     return this.clientHttp.post(this.API+"?store=1",dataEmployee);
   }
+
+  GetEmployees(){
+    return this.clientHttp.get(this.API);
+  }
 }

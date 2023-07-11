@@ -14,17 +14,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="">
-                        <td scope="row">R1C1</td>
-                        <td>R1C2</td>
-                        <td>R1C3</td>
-                        <td>Edit</td>
-                    </tr>
-                    <tr class="">
-                        <td scope="row">Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Edit</td>
+                    <tr *ngFor="let employee of Employees; let iControl=index">
+                        <td scope="row">{{ employee.id }}</td>
+                        <td>{{ employee.name }}</td>
+                        <td>{{ employee.email }}</td>
+                        <td>
+                            <a routerLink="/edit-employee/{{ employee.id }}">Edit</a>
+                            <a>Delete</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
