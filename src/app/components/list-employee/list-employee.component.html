@@ -19,8 +19,8 @@
                         <td>{{ employee.name }}</td>
                         <td>{{ employee.email }}</td>
                         <td>
-                            <a routerLink="/edit-employee/{{ employee.id }}">Edit</a>
-                            <a>Delete</a>
+                            <a class="btn btn-info mx-2" routerLink="/edit-employee/{{ employee.id }}">Edit</a>
+                            <a class="btn btn-danger" (click)="deleteRegister(employee.id, iControl)" role="button">Delete</a>
                         </td>
                     </tr>
                 </tbody>

@@ -21,4 +21,14 @@ export class ListEmployeeComponent {
       this.Employees = respuesta;
     });
   }
+
+  deleteRegister(id:any, iControl:any){
+    console.log(id);
+    console.log(iControl);
+    if (window.confirm("¿Desea borrar el registro?")) {
+      this.crudService.DeleteEmployee(id).subscribe((respuesta)=>{
+        this.Employees.splice(iControl,1);
+      })
+    }
+  }
 }
