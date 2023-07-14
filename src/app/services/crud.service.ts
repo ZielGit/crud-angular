@@ -24,4 +24,12 @@ export class CrudService {
   DeleteEmployee(id:any):Observable<any>{
     return this.clientHttp.get(this.API+"?borrar="+id);
   }
+
+  GetEmployee(id:any):Observable<any>{
+    return this.clientHttp.get(this.API+"?consultar="+id);
+  }
+
+  EditEmployee(id:any, dataEmployee:Employee):Observable<any>{
+    return this.clientHttp.post(this.API+"?update="+id,dataEmployee);
+  }
 }
