@@ -22,7 +22,8 @@ export class AddEmployeeComponent {
 
   enviarDatos():any {
     console.log(this.formEmployee.value);
-    this.crudService.AddEmployee(this.formEmployee.value).subscribe();
-    this.ruteador.navigateByUrl('/list-employee');
+    this.crudService.AddEmployee(this.formEmployee.value).subscribe(respuesta => {
+      this.ruteador.navigateByUrl('/list-employee');
+    });
   }
 }

@@ -22,7 +22,7 @@ export class CrudService {
   }
 
   DeleteEmployee(id:any):Observable<any>{
-    return this.clientHttp.get(this.API+"?borrar="+id);
+    return this.clientHttp.get(this.API+"?delete="+id);
   }
 
   GetEmployee(id:any):Observable<any>{
